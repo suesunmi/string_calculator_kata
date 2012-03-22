@@ -17,7 +17,7 @@ class StringCalculator
     if string_of_numbers.start_with?("//")
       custom_index = (string_of_numbers.index(/\n/)) - 1
       custom_delimeter = string_of_numbers[custom_index]
-      delimiters = Regexp.union(",", "\n", another)
+      delimiters = Regexp.union(",", "\n", custom_delimeter)
     end
     delimiters
   end
